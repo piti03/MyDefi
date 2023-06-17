@@ -6,7 +6,7 @@ contract RWD{
     string public symbol = "RWD";
     uint public totalSupply = 1000000000000000000000000;
     uint public decimal = 18;
-    mapping(address => uint) balanceOf;
+    mapping(address => uint)public balanceOf;
     mapping(address => mapping(address => uint))allowAnce;
 
     event Transfer(
@@ -45,7 +45,7 @@ contract RWD{
     }
 
 
-    function approve(address _from, address _to, uint256 _value)public returns(bool succeed){
+    function transferFrom(address _from, address _to, uint256 _value)public returns(bool succeed){
         // Abality to transacting
         require(allowAnce[_from][msg.sender] >= _value);
         require(balanceOf[_from] >= _value);

@@ -3,7 +3,7 @@ pragma solidity ^0.8.13;
 
 
 contract Tether{
-    string public name = 'mock Tether';
+    string public name = 'Mock Tether';
     string public symbol = 'USDT';
     uint public totalSupllied = 1000000000000000000000000;
     uint public decimal = 18;
